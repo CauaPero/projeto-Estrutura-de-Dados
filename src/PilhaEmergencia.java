@@ -8,7 +8,7 @@ public class PilhaEmergencia {
     }
 
     public void push(Chamado chamado) {
-        if (topo == pilha.length) {
+        if (topo == pilha.length - 1) {
             System.out.println("Limite de chamados atingido!");
         } else {
             topo++;

@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class FilaChamados {
     private Chamado[] fila;
     private int inicio;
@@ -10,7 +13,7 @@ public class FilaChamados {
     }
 
     public void enqueue(Chamado chamado) {
-        if(fim == fila.length - 1) {
+        if(isFull()) {
             System.out.println("Fila cheia");
         } else {
             fim++;
@@ -19,7 +22,7 @@ public class FilaChamados {
     }
 
     public Chamado dequeue() {
-        if(inicio > fim) {
+        if(isEmpty()) {
             System.out.println("Fila vazia");
             return null;
         } else {
@@ -31,6 +34,14 @@ public class FilaChamados {
 
     public boolean isEmpty() {
         if (inicio > fim) {
+            return true;
+        }
+        
+        return false;
+    }
+
+    public boolean isFull() {
+        if(fim == fila.length - 1) {
             return true;
         }
         
