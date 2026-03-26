@@ -17,4 +17,23 @@ public class FilaChamados {
             fila[fim] = chamado;
         }
     }
+
+    public Chamado dequeue() {
+        if(inicio > fim) {
+            System.out.println("Fila vazia");
+            return null;
+        } else {
+            Chamado removido = fila[inicio];
+            inicio++;
+            return removido;
+        }
+    }
+
+    public boolean isEmpty() {
+        if (inicio > fim) {
+            return true;
+        }
+        
+        return false;
+    }
 }
