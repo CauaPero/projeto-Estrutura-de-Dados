@@ -1,8 +1,0 @@
-RELATÓRIO DE CHAMADOS
-========================
-ID: 10 | Bairro: 23 | Urgência: 3 | Status: ABERTO
-
-Média de urgência: 3.0
-
-Chamados pendentes:
-ID: 10 | URGENCIA: 3
